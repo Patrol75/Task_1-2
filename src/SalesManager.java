@@ -1,22 +1,22 @@
 public class SalesManager {
-    protected int[] sales;
+    protected long[] sales;
 
-    public SalesManager(int[] sales) {
+    public SalesManager(long[] sales) {
         this.sales = sales;
     }
 
-    public int max() {
-        int max = -1;
-        for (int sale : sales) {
+    public long max() {
+        long max = -1;
+        for (long sale : sales) {
             if (sale > max) {
                 max = sale;
             }
         }
         return max;
     }
-    public int min() {
-        int min = 10;
-        for (int sale : sales) {
+    public long min() {
+        long min = 10;
+        for (long sale : sales) {
             if (sale < min) {
                 min = sale;
             }
@@ -24,12 +24,12 @@ public class SalesManager {
         return min;
     }
 
-    public int stat() {
-        int sum = 0;
-        int count = 0;
-        int max = this.max();
-        int min = this.min();
-        for (int sale : sales) {
+    public long stat() {
+        long sum = 0;
+        long count = 0;
+        long max = this.max();
+        long min = this.min();
+        for (long sale : sales) {
             if (sale != min && sale != max) {
                 sum += sale;
                 count++;
